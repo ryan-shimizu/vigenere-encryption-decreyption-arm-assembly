@@ -11,5 +11,8 @@ Import into SEGGER Embedded Studio. GCC compiler + GNU linker required. Compiled
 4. Select whether to 1. Encrypt or 2. Decrypt
 5. Encrypted/decrypted text will be displayed in the console.
 
+See attached report (in PDF format) for detailed information on how this is implemented.
+Note: Code in the report may be an older version of the code listed in this repository.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
