@@ -46,7 +46,6 @@
       ADD R0, R0, R1      //r0 = r0 - offset, r0 now points back to beginning of string
     
 
-    //taken from homework template
      pop {lr}			// pop link register from stack 
      mov sp,r12		// restore the stack pointer -- Please note stack pointer should be equal to the 
                                           // value it had when you entered the function .  
@@ -120,7 +119,7 @@
     SUB R3, R1, R2   ///R3 = userLength - keyLength
     MOV R4, R0    //copy address of beginner pointer into r4
     MOV R7, #0X1    
-    MUL R5, R2, R7    //calculate offset (distance between beginning of string to the end), kinda redundant oops
+    MUL R5, R2, R7    //calculate offset (distance between beginning of string to the end)
 
     ADD R4, R4, R5    // R4 now points to the end of the string
     FOR2:
@@ -142,7 +141,7 @@
     REDUCE:           //if here, userLength is less than keyLength
       SUB R3, R2, R1   //r3 = keyLength - userLength
       MOV R7, #0X1
-      MUL R4, R2, R7    //calculate offset (distance between beginning of string to the end), also redundant
+      MUL R4, R2, R7    //calculate offset (distance between beginning of string to the end)
 
       ADD R0, R0, R4      //move pointer to end of string
       
@@ -220,12 +219,12 @@
       STR R6, [R1]        //
       MOV R6, #0X1        //constant byte holder
       ADD R5, R5, #1      //since we are one byte ahead from previous steps
-      MUL R5, R5, R6      //total distance travelled, redundant
+      MUL R5, R5, R6      //total distance travelled
       SUB R0, R0, R5
       SUB R1, R1, R5      //go back to beginning of string
 
 
-       //taken from homework template
+     
     pop {lr}			// pop link register from stack 
     mov sp,r12		// restore the stack pointer -- Please note stack pointer should be equal to the 
                                          // value it had when you entered the function .  
@@ -236,7 +235,7 @@
     .data
     // declare any global variables here
    .text
-    vigenereDecrypt:         //taken from homework template
+    vigenereDecrypt:        
     mov   r12,r13		// save stack pointer into register r12
     sub   sp,#32		// reserve 32 bytes of space for local variables 
     push  {lr}		// push link register onto stack -- make sure you pop it out before you return 
@@ -292,7 +291,7 @@
       SUB R0, R0, R5
       SUB R1, R1, R5      //go back to beginning of string
 
-    //taken from homework template
+ 
     pop {lr}			// pop link register from stack 
     mov sp,r12		// restore the stack pointer -- Please note stack pointer should be equal to the 
                                          // value it had when you entered the function .  
